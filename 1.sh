@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+
+
 menu="
 Digite o respectivo número para o conceito do direcionadmento:
     1 - >
