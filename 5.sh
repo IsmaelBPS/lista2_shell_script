@@ -16,4 +16,4 @@ while [ -n "${1}" ]; do
 shift
 done
 
-echo "Maior arquivo é : ${greater_file}"
+echo -e "\nMaior arquivo é : ${greater_file}"
