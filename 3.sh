@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
-maior=0
-while [ -n "$1" ];do
-    if [ -z "${menor}" ];then
-        menor=$1
+read -p "Digite dois números: " -r -a nums
+lowest_num=${nums[0]}
+highest_num=${nums[0]}
+for n in "${nums[@]}"; do
+    if [ "${n}" -gt "${highest_num}" ]; then
+        highest_num=${n}
+    elif [ "${n}" -lt "${lowest_num}" ]; then
+        lowest_num=${n}
     fi
-    if [ $1 -lt $menor ];then
-        menor=$1
-    fi
-    if [ $1 -gt $maior ];then
-        maior=$1
-    fi
-    shift
 done
 
-echo "Menor : ${menor}"
-echo "Maior : ${maior}"
+echo "Menor : ${lowest_num}"
+echo "Maior : ${highest_num}"
